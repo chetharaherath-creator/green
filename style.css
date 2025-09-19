@@ -254,3 +254,28 @@ header { position: sticky; top: 0; z-index: 50; }
   .newsletter{ flex-direction:column; }
   .newsletter-btn{ width:100%; }
 }
+
+
+
+/* --- Fix Hero responsiveness on phones --- */
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80svh;   /* safe viewport height */
+}
+
+@media (max-width: 600px){
+  .hero {
+    min-height: 56svh; /* smaller hero for tiny phones */
+  }
+  .hero-content {
+    padding: 20px 14px;
+    margin: 0 12px;
+  }
+  .hero h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+}
+
